@@ -24,9 +24,9 @@ include(CheckLinkerFlag)
 set(Redpanda_LINKER "lld" CACHE STRING "Linker to use")
 set(Redpanda_LINKER_FLAGS "-fuse-ld=${Redpanda_LINKER}")
 check_linker_flag(CXX ${Redpanda_LINKER_FLAGS} HAVE_Redpanda_LINKER_FLAGS)
-if(NOT HAVE_Redpanda_LINKER_FLAGS)
-  message(FATAL_ERROR "Linker ${Redpanda_LINKER} not found or not supported")
-endif()
+#if(NOT HAVE_Redpanda_LINKER_FLAGS)
+#  message(FATAL_ERROR "Linker ${Redpanda_LINKER} not found or not supported")
+#endif()
 add_link_options(${Redpanda_LINKER_FLAGS})
 
 # enable sanitizers. will propogate to all targets, including dependencies

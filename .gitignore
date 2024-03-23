@@ -259,3 +259,5 @@ vbuild/
 
 #asdf tool version file
 .tool-versions
+
+.direnv
